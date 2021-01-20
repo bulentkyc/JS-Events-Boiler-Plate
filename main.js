@@ -64,19 +64,16 @@ function secretHi(param1, e) {
 //document.addEventListener('keypress', secretHi);
 
 
-//Task - 1: Secret door
+//Task - 1 & 2 : Secret door
 let userInput = '';
-let keyInput = 'the404s';
 
 function secretKeyHandler(e) {
     userInput += e.key;
     console.log(e);
-    if (userInput == keyInput) {
+    if (userInput == 'the404s') {
         alert ('Welcome to the secret menu');
     }
 }
-
-
 
 
 function secretMouseEnterHandler() {
@@ -93,3 +90,15 @@ function secretMouseLeaveHandler() {
 
 $('#pic').addEventListener('mouseenter', secretMouseEnterHandler);
 $('#pic').addEventListener('mouseleave', secretMouseLeaveHandler);
+
+
+//Task - 3:
+
+function picClickHandler(text, event) {
+    alert(text + event.target.src);
+}
+
+
+$('#pic').addEventListener('click', function (e) { picClickHandler('Happy hacking! \n', e) });
+
+//
