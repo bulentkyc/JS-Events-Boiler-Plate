@@ -117,9 +117,23 @@ function calc(a,b) {
 $('#pic').addEventListener('keyup', calc) */
 
 function submitHandler(e) {
+    
+
     e.preventDefault();
-    console.log(e);
+    let userData = {};
+    console.dir(e);
     alert('Here we go');
+
+    userData.name = e.target[0].value;
+    userData.lastName = e.target[1].value;
+    userData.address = e.target[2].value;
+
+    console.log(userData);
+
+    let submitText = `<p class='alert-success'>Dear ${userData.name} ${userData.lastName}, your address is saved successfully as ${userData.address} </p>`
+
+    $('body').innerHTML += submitText;
+
 }
 
 $('#myForm').addEventListener('submit', submitHandler);
