@@ -98,7 +98,29 @@ function picClickHandler(text, event) {
     alert(text + event.target.src);
 }
 
+function middleWare(e) {
+    console.log(e);
+    picClickHandler('Happy Hacking \n', e);
+}
 
-$('#pic').addEventListener('click', function (e) { picClickHandler('Happy hacking! \n', e) });
+$('#pic').addEventListener('click',middleWare);
 
+$('#pic').addEventListener('click', function (e) { picClickHandler(userInput, e) });
+
+//$('#pic').addEventListener('keypress',); 
 //
+/* 
+function calc(a,b) {
+    return(a+b);
+}
+
+$('#pic').addEventListener('keyup', calc) */
+
+function submitHandler(e) {
+    e.preventDefault();
+    console.log(e);
+    alert('Here we go');
+}
+
+$('#myForm').addEventListener('submit', submitHandler);
+
