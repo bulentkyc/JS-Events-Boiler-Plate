@@ -132,7 +132,8 @@ function submitHandler(e) {
 
     let submitText = `<p class='alert-success'>Dear ${userData.name} ${userData.lastName}, your address is saved successfully as ${userData.address} </p>`
 
-    $('body').innerHTML += submitText;
+    //$('body').innerHTML += submitText;
+    $('body').insertAdjacentHTML('beforeend', submitText)
 
 }
 
