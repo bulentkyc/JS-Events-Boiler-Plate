@@ -1,6 +1,6 @@
-console.dir(document.getElementsByTagName('body'));
+//console.dir(document.getElementsByTagName('body'));
 
-function $ (query, arr) {
+function $ (query, log, arr, index) {
     let res = document.querySelectorAll(query);
     //console.log(res);
 
@@ -25,7 +25,23 @@ function $ (query, arr) {
             break;
     }
 
-    return output;
+    if (index >= 0) {
+        if (res.length <= 1) {
+            throw ('Hey you have just 1 item or any. Please don\'t set any index for this quey');
+            //console.warn('Hey you have just 1 item or any. Please don\'t set any index for this quey')
+        }
+        if (log != null) {
+            console.log(log +': ', output[index]);
+        }
+        
+        return output[index];
+    } else {
+        if (log != null) {
+            console.log(log +': ', output);
+        }
+        return output;
+    }
+    
 
 }
 
@@ -145,3 +161,41 @@ function submitHandler(e) {
 
 $('#myForm').addEventListener('submit', submitHandler);
 
+//console.log($('#pic', 2));
+/* 
+console.log($('input'));
+
+$('input', 'bulent');
+
+console.log($('#pic',null, true));
+
+$('#pic', 'bulent', true);
+
+
+
+$('input', 'all inputs in the form');
+
+console.log('all inputs in the form' +':', $('input'));
+console.log('all inputs in the form' +':', document.querySelectorAll('input'));
+
+
+$('input', '2. input', true, 2);
+$('input', 2, true, 2);
+
+$('input', false, true, 0);
+
+
+ */
+
+
+
+console.log($('#pic'));
+
+//$('#pic').src = 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png';
+
+//$('#pic', 'test 1').src = 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png';
+
+
+$('input', 'inputs')[2].style.border = '2px solid red';
+
+$('#pic', null, false).style.border = '2px solid red';
