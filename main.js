@@ -204,8 +204,52 @@ function app () {
 
     $('#pic', null, false).style.border = '2px solid red';
 
+    
+    function resetFormHandler(e) {
+        alert('Hey are you serious? You\'re resetting the form!');
+        console.log(e);
+        console.log(e.target[0].value);
+
+        //e.preventDefault();
+        let userData = {};
+        console.dir(e);
+        alert('Here we go');
+    /* 
+        //v1
+        userData.name = e.target[0].value;
+        userData.lastName = e.target[1].value;
+        userData.address = e.target[2].value;
+    */
+
+        //v2
+        console.log(e.target.length);
+        for (let i = 0; i < e.target.length-1; i++) {
+            userData[e.target[i].id] = e.target[i].value
+        }
+    
+
+        console.log(userData);
+
+        let submitText = `<p class='alert-danger'>Dear ${userData.name} ${userData.lastName}, your address is saved successfully as ${userData.address} </p>`
+
+        //$('body').innerHTML = $('body').innerHTML + submitText;
+        $('body').insertAdjacentHTML('beforeend', submitText);
+
+    }
+    
+    
+    document.getElementById('myForm').addEventListener('reset', resetFormHandler)
+    
+    
+    
+    
+    
+    
+    
     //Time-stamp for Dom adn JS ready
-    console.log(2,new Date().getTime())
+    console.log(2,new Date().getTime());
+
+
 }
 
 console.log(3,new Date().getTime())
