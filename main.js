@@ -48,7 +48,7 @@ function $ (query, log, arr, index) {
 }
 
 function app () {
-
+    //alert('Hop')
     let uName = '';
 
     function salute(e) {
@@ -243,13 +243,18 @@ function app () {
     
     
     
-    
-    
-    
+
     //Time-stamp for Dom adn JS ready
     console.log(2,new Date().getTime());
 
+    //$ ('#uName','test',true,5)
 
+    console.log(window.location)
+
+//alert(window.location)
+
+//$('input',null,true,0).value = window.location.pathname
 }
 
-console.log(3,new Date().getTime())
+console.log(3,new Date());
+

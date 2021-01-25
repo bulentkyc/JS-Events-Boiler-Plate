@@ -8,7 +8,7 @@
     <script src="./main.js"></script>
 </head>
 <!-- <body onclick="salute()">  // Connect to salute function-->
-<body>
+<body  onclick="alert('body is clicked')">
     <div>
         <input type="text" id="uName">
         <button id="salute"> Salute</button>
@@ -16,6 +16,7 @@
 
     <img id="pic" src="https://lh3.googleusercontent.com/proxy/5tddL2aOjvkmuzc2944M7rnIFOdzoKjGSfkFLoiRsdTjH3opXhzpYlXQT5s8srT5mS83hNpSDLmrL70VNOyckwT0P5BOUy-F5VYhagoRlVoXNmOElElHXQlogbtv4FgvfPHflA">
 
+    
     <form id="myForm">
         <input id="name" type="text" placeholder="Name">
         <input id="lastName" type="text" placeholder="Last Name">
@@ -24,5 +25,13 @@
         <input type="submit">
         <input type="reset">
     </form>
+
+    <hr>
+
+    <section onclick="alert('section is clicked')">
+        <div onclick="alert('div is clicked')">
+            <p onclick="alert('p is clicked')">Hey Test me :)</p>
+        </div>
+    </section>
 </body>
 </html>
