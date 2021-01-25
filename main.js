@@ -254,6 +254,18 @@ function app () {
 //alert(window.location)
 
 //$('input',null,true,0).value = window.location.pathname
+
+window.addEventListener('click', function(){console.log('Window')});
+
+function eventLogger(e) {
+    //console.log(e)
+    console.log('Target: ', e.target.id);
+    console.log('Current-target: ', e.currentTarget.id);
+}
+
+document.getElementById('goal').addEventListener('click', eventLogger);
+document.getElementById('goalParent').addEventListener('click', eventLogger);
+document.getElementById('goalGrandPa').addEventListener('click', eventLogger);
 }
 
 console.log(3,new Date());

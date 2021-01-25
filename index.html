@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="console.log('document is clicked')">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <script src="./main.js"></script>
 </head>
 <!-- <body onclick="salute()">  // Connect to salute function-->
-<body  onclick="alert('body is clicked')">
+<body  onclick="console.log('body is clicked')">
     <div>
         <input type="text" id="uName">
         <button id="salute"> Salute</button>
@@ -28,10 +28,39 @@
 
     <hr>
 
-    <section onclick="alert('section is clicked')">
-        <div onclick="alert('div is clicked')">
-            <p onclick="alert('p is clicked')">Hey Test me :)</p>
+    <section onclick="console.log('section is clicked')">
+        <div onclick="console.log('div is clicked')">
+            <p onclick="console.log('p is clicked')">Hey Test me :)</p>
         </div>
     </section>
+    
+    <p onclick="console.log('p is clicked')">
+        <b onclick="console.log('b is clicked')">Lorem</b>
+        ipsum 
+        <span onclick="console.log('span is clicked')">
+            dolor 
+            <i onclick="console.log('i is clicked')">
+                sit
+            </i> 
+            amet
+        </span>
+        , consectetur adipisicing elit.
+    </p>
+
+    <hr>
+
+    <p id="goalGrandPa">
+        <b>Lorem</b>
+        ipsum 
+        <span id="goalParent">
+            dolor 
+            <i id="goal">
+                sit
+            </i> 
+            amet
+        </span>
+        , consectetur adipisicing elit.
+    </p>
+
 </body>
 </html>
