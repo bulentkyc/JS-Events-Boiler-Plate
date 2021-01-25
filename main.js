@@ -257,7 +257,20 @@ function app () {
 
 window.addEventListener('click', function(){console.log('Window')});
 
+/*
+Capturing phase – the event goes down to the element.
+Target phase – the event reached the target element.
+Bubbling phase – the event bubbles up from the element.
+*/
+
+
 function eventLogger(e) {
+/* 
+    if (e.currentTarget.id == 'goalGrandPa') {
+        e.stopPropagation();
+    }
+ */
+    //e.stopPropagation();
     //console.log(e)
     console.log('Target: ', e.target.id);
     console.log('Current-target: ', e.currentTarget.id);
