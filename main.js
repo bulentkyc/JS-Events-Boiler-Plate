@@ -1,6 +1,37 @@
 //Time-stamp for Js start
 console.log(1,new Date().getTime());
 window.addEventListener('load', app);
+/* 
+let menu = [
+    {
+        menuId: 1,
+        title: 'Pages',
+        link: null,
+        children: [
+            {
+                menuId: 2,
+                title: 'Account',
+                link: null,
+                children:[]
+            },
+            {
+                menuId: 3,
+                title: 'Authentication',
+                link: null,
+                children:[
+                    {
+                        menuId: 4,
+                        title: 'Basic',
+                        link: null,
+                        children:[]
+                    }
+                ]
+            }
+        ],
+
+]
+ */
+
 //console.dir(document.getElementsByTagName('body'));
 function $ (query, log, arr, index) {
     let res = document.querySelectorAll(query);
@@ -279,6 +310,21 @@ function eventLogger(e) {
 document.getElementById('goal').addEventListener('click', eventLogger);
 document.getElementById('goalParent').addEventListener('click', eventLogger);
 document.getElementById('goalGrandPa').addEventListener('click', eventLogger);
+
+function menuHandler(e) {
+    //alert(e.target.innerHTML)
+    if(!e.target.classList.contains('menu-item')){
+        //alert(e.target.innerHTML)
+        if (e.target.parentElement.children[1].style.display != 'block') {
+            e.target.parentElement.children[1].style.display = 'block'
+        } else {
+            e.target.parentElement.children[1].style.display = 'none'
+        }
+        
+    }
+}
+
+document.querySelector('#side-menu').addEventListener('click', menuHandler);
 }
 
 console.log(3,new Date());
