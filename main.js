@@ -316,9 +316,9 @@ function menuHandler(e) {
     if(!e.target.classList.contains('menu-item')){
         //alert(e.target.innerHTML)
         if (e.target.parentElement.children[1].style.display != 'block') {
-            e.target.parentElement.children[1].style.display = 'block'
+            e.target.parentElement.children[1].style.display = 'block';
         } else {
-            e.target.parentElement.children[1].style.display = 'none'
+            e.target.parentElement.children[1].style.display = 'none';
         }
         
     }
